@@ -1,0 +1,37 @@
+.header {
+    margin: 36px;
+}
+
+.outer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.left, .right {
+    margin-top: 32px;
+    padding: 16px;
+    gap: 16px;
+}
+
+.outputs {
+    width: 200px;
+    text-align: center;
+    gap: 16px;
+}
+
+
+#round {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 0px;
+}
+
+
+#over {
+    margin-top: 16px;
+}
