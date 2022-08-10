@@ -4,9 +4,7 @@ let score = 0;
 let roundNo = 1;
 let roundMax = 5;
 
-const rockBttn = document.getElementById("rock");
-const paperBttn = document.getElementById("paper");
-const scissorsBttn = document.getElementById("scissors");
+const bttns = document.getElementById("buttons");
 const outputFld = document.getElementById("game-output");
 const scoreFld = document.getElementById("score");
 const vsFld = document.getElementById("vs");
@@ -14,9 +12,11 @@ const roundNoFld = document.getElementById("round");
 const resetBttn = document.getElementById("reset");
 const overFld = document.getElementById("over");
 
-rockBttn.addEventListener("click", () => handleClick("rock"));
-paperBttn.addEventListener("click", () => handleClick("paper"));
-scissorsBttn.addEventListener("click", () => handleClick("scissors"));  
+buttons.addEventListener("click", event => {
+  if (event.target.nodeName == "BUTTON") {
+    handleClick(event.target.textContent.toLowerCase());
+}});
+ 
 resetBttn.addEventListener("click", resetGame);
 
 function getComputerItem() {
