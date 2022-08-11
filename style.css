@@ -50,3 +50,12 @@
 #over {
     margin-top: 16px;
 }
+
+button {
+    background-color: bisque;
+    border-radius: 8px;
+    color: #5d2e2e;
+    padding: 6px 8px;
+    border: solid 2px #b08686;
+    font-weight: bold;
+}
