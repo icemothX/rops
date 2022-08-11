@@ -81,6 +81,7 @@ function incrementScore() {
 }
 
 function endGame() {
+  overFld.classList.add("gameOver");
   overFld.innerText = `Game over!\n
     Your total score is ${score}\n
     Press any button to start over...`;
@@ -94,4 +95,5 @@ function resetGame() {
   outputFld.textContent="";
   scoreFld.textContent="";
   overFld.textContent="";
+  overFld.classList.remove("gameOver");
 }

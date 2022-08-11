@@ -1,8 +1,11 @@
 .title {
-    margin: 36px;
+    padding: 36px;
+    background-color: antiquewhite;
+    text-align: center;
 }
 .outer {
     align-items: center;
+    background-color: aliceblue;
 }
 
 .header {
@@ -49,6 +52,16 @@
 
 #over {
     margin-top: 16px;
+    padding 16px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+
+.gameOver {
+    border: solid red 3px; 
+    border-radius: 10px;
 }
 
 button {
