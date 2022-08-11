@@ -89,7 +89,7 @@ function endGame() {
 function resetGame() {
   roundNo =1;
   score =0;
-  roundNoFld.textContent="";
+  roundNoFld.textContent="Press a button to start";
   vsFld.textContent="";
   outputFld.textContent="";
   scoreFld.textContent="";

@@ -6,23 +6,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2 class="header">Play rock paper scissors</h2>
-    <div class="outer">
-    <div class="column left" id="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-    </div>
-    <div class="column outputs">
-    <div id="round">Press a button to start</div>
-    <div id="vs"></div>
-    <div id="game-output"></div>
-    <div id="score"></div>
-    <div id="over"></div>
-    </div>
-    <div class="right">
-    <button id="reset">Reset</button>
-    </div>
+    <h2 class="title">Play rock paper scissors</h2>
+    
+    <div class="outer column">
+        <div class="header">
+            <div id="round">Press a button to start</div>
+        </div>
+        <div class="inner">
+            <div class="column left" id="buttons">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
+            <div class="column outputs">
+                <div id="vs"></div>
+                <div id="game-output"></div>
+                <div id="score"></div>
+            </div>
+            <div class="right">
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+
+        <div id="over"></div>
     </div>
     <script src="game.js"></script>
 </body>
