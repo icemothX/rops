@@ -4,6 +4,8 @@
 
 html {
     border: 0px;
+    background: url('./IMG_5085_01_A.jpg') bottom center;
+    font-family: sans-serif;
 }
 
 body {
@@ -47,6 +49,7 @@ body {
 .inner {
     display: flex;
     justify-content: center;
+    min-height: 50vh;
 }
 
 .column {
