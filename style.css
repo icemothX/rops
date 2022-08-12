@@ -1,3 +1,29 @@
+* {
+    border: solid blue 3px;
+}
+
+html {
+    border: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    border: 0px;
+}
+
+.center {
+    min-height: 100vh;
+    border: 0px;
+}
+.side {
+    width: 20px;
+    background-color: bisque;
+}
+
 .title {
     padding: 36px;
     background-color: antiquewhite;
@@ -47,6 +73,7 @@
     font-size: 20px;
     font-weight: bold;
     margin: 4px 0px;
+    transition: all 0.15s ease;
 }
 
 
@@ -71,4 +98,8 @@ button {
     padding: 6px 8px;
     border: solid 2px #b08686;
     font-weight: bold;
+}
+
+.hidden {
+    visibility: hidden;
 }
