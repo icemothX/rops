@@ -45,7 +45,7 @@ function playRound(UserItem, ComputerItem) {
     case UserItem==="paper" && ComputerItem==="rock":
     case UserItem==="scissors" && ComputerItem==="paper":
       incrementScore();
-      return `You won!`;
+      return `You win!`;
         
     default:
       return "Something went wrong";

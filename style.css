@@ -1,6 +1,6 @@
-* {
+/* {
     border: solid blue 3px;
-}
+}*/
 
 html {
     border: 0px;
@@ -18,8 +18,11 @@ body {
 }
 
 .center {
-    min-height: 100vh;
+    height: 100vh;
     border: 0px;
+    border-left: solid #060606f0 3px;
+    border-right: solid #060606f0 3px;
+    background: rgba(0,0,0,0.4);
 }
 .side {
     width: 20px;
@@ -28,9 +31,11 @@ body {
 
 .title {
     padding: 36px;
+    margin: 12px 0 0;
     text-align: center;
     background: rgba(0,0,0,0.4);
     color: #e6e6e6;
+    background: #e6e6e666;
 }
 .outer {
     align-items: center;
@@ -45,7 +50,7 @@ body {
 #round {
     text-align: center;
     color: #e6e6e6;
-    padding: 16px;
+    padding: 24px;
     text-align: center;
 }
 
@@ -67,13 +72,29 @@ body {
 }
 
 .outputs {
-    width: 200px;
+    width: 300px;
+    flex: 1;
+    background: #e6e6e666;
+    border-radius: 10px;
+    /*justify-content: space-around;*/
+}
+
+.upper {
     text-align: center;
-    justify-content: center;
+    height: 50%;
+    justify-content: space-around;
     gap: 16px;
     padding: 12px;
     /*background-color: aliceblue;*/
-    color: #e6e6e687;
+    color: #060606;
+    font-size: 22px;
+}
+
+.lower {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -86,17 +107,22 @@ body {
 
 
 #over {
-    margin-top: 16px;
     padding: 16px;
-    color: red;
+    color: #b85050f0;
     display: flex;
     justify-content: center;
-    width: 300px;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    font-weight: 900;
+    /*width: 300px;*/
 }
 
 .gameOver {
-    border: solid red 3px; 
+   /* border: solid #b85050f0 5px; 
     border-radius: 10px;
+    
+    text-align: center;*/
 }
 
 button {
