@@ -34,19 +34,12 @@ body {
     margin: 12px 0 0;
     text-align: center;
     background: rgba(0,0,0,0.4);
-    color: #e6e6e6;
+    color: #1a1717;
     background: #e6e6e666;
-}
-.outer {
-    align-items: center;
+    font-size: 1.9em;
+    font-weight: bold;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    width: 300px;
-    padding: 16px;
-}
 #round {
     text-align: center;
     color: #e6e6e6;
@@ -86,8 +79,9 @@ body {
     gap: 16px;
     padding: 12px;
     /*background-color: aliceblue;*/
-    color: #060606;
+    color: #0d2904;
     font-size: 22px;
+    font-weight: bold;
 }
 
 .lower {
@@ -108,13 +102,14 @@ body {
 
 #over {
     padding: 16px;
-    color: #b85050f0;
+    color: #390f0ff0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 80%;
-    font-weight: 900;
+    font-size: 22px;
+    font-weight: bold;
     /*width: 300px;*/
 }
 
