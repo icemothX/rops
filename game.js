@@ -7,11 +7,12 @@ let scoreMax = 5;
 let winner = "";
 
 const bttns = document.getElementById("buttons");
+const resetBttn = document.getElementById("reset");
+
+const roundNoFld = document.getElementById("round");
+const vsFld = document.getElementById("vs");
 const outputFld = document.getElementById("game-output");
 const scoreFld = document.getElementById("score");
-const vsFld = document.getElementById("vs");
-const roundNoFld = document.getElementById("round");
-const resetBttn = document.getElementById("reset");
 const overFld = document.getElementById("over");
 const pressFld = document.getElementById("press");
 
@@ -22,17 +23,21 @@ buttons.addEventListener("click", event => {
  
 resetBttn.addEventListener("click", resetGame);
 
-function getComputerItem() {
-  let x = Math.floor(Math.random()*3);
-  switch (true) {
-    case x===0: 
-      return "rock";
-    case x===1: 
-      return "paper";
-    case x===2:
-      return "scissors";
+
+function handleClick(UserItem) {
+  if (winner!="") resetGame();
+      playGame(UserItem);
   }
-}
+
+  function playGame(UserItem) {
+    roundNoFld.textContent = `Round ${roundNo}`
+    let ComputerItem = getComputerItem();
+    vsFld.textContent = `${UserItem} vs. ${ComputerItem}`
+    outputFld.textContent = playRound(UserItem, ComputerItem);
+    scoreFld.textContent = `You: ${userScore} --- Computer: ${computerScore}`;
+    if (checkWinner()) endGame();
+      roundNo += 1;
+  }
 
 function playRound(UserItem, ComputerItem) {
   switch (true) {
@@ -56,15 +61,18 @@ function playRound(UserItem, ComputerItem) {
   }
 }
 
-function playGame(UserItem, lastGame=false) {
-  roundNoFld.textContent = `Round ${roundNo}`
-  let ComputerItem = getComputerItem();
-  vsFld.textContent = `${UserItem} vs. ${ComputerItem}`
-  outputFld.textContent = playRound(UserItem, ComputerItem);
-  scoreFld.textContent = `You: ${userScore}, computer: ${computerScore}`;
-  if (checkWinner()) endGame();
-    roundNo += 1;
+function getComputerItem() {
+  let x = Math.floor(Math.random()*3);
+  switch (true) {
+    case x===0: 
+      return "rock";
+    case x===1: 
+      return "paper";
+    case x===2:
+      return "scissors";
+  }
 }
+
 
 function checkWinner() {
   if (computerScore >= 5) {
@@ -76,15 +84,6 @@ function checkWinner() {
     return true;
   }
   return false;
-}
-
-function handleClick(UserItem) {
-  if (winner!="") resetGame();
-      playGame(UserItem);
-  }
-
-function incrementScore() {
-  score += 1; //happens inside playRound function
 }
 
 function endGame() {
