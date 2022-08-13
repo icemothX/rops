@@ -124,6 +124,17 @@ button {
     transition: all 0.08s ease;
 }
 
+button:hover {
+   background-color: #88888866;
+   transform: scale(1.1);
+}
+
+button:active {
+    color: #aaaaaa;
+    border-color: #aaaaaa;
+    background-color: #00000066;
+}
+
 .uponClick {
     transform: scale(1.1);
     color: #aaaaaa;

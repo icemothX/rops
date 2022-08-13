@@ -16,15 +16,7 @@ const pressFld = document.getElementById("press");
 
 bttnList.forEach(btn => btn.addEventListener("click", handleClick));
 
-bttnList.forEach(btn => btn.addEventListener("transitionend", removeTransition))
-
-function removeTransition(event) {
-  if (event.propertyName!="transform") return;
-  event.target.classList.remove("uponClick");
-}
-
 function handleClick(event) {
-  event.target.classList.add("uponClick");
   let buttonID = event.target.getAttribute("id");
   switch (true) {
     case buttonID==="reset": {
