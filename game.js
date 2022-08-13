@@ -2,14 +2,11 @@ console.log("Hello World!");
 
 let userScore = 0;
 let computerScore = 0;
-let roundNo = 1;
+let roundNo = 0;
 let scoreMax = 5;
 let winner = "";
 
-const bttns = document.querySelectorAll("button");
-const resetBttn = document.getElementById("reset");
-const leftBttns = document.querySelector(".left");
-
+const bttnList = document.querySelectorAll("button");
 const roundNoFld = document.getElementById("round");
 const vsFld = document.getElementById("vs");
 const outputFld = document.getElementById("game-output");
@@ -17,37 +14,38 @@ const scoreFld = document.getElementById("score");
 const overFld = document.getElementById("over");
 const pressFld = document.getElementById("press");
 
-leftBttns.addEventListener("click", event => {
-  if (event.target.nodeName == "BUTTON") {
-    handleClick(event);
-}});
- 
-resetBttn.addEventListener("click", e => {
-  resetBttn.classList.add("uponClick");
-  resetGame(e);
-});
+bttnList.forEach(btn => btn.addEventListener("click", handleClick));
 
-bttns.forEach(btn => btn.addEventListener("transitionend", removeTransition))
+bttnList.forEach(btn => btn.addEventListener("transitionend", removeTransition))
 
 function removeTransition(event) {
   if (event.propertyName!="transform") return;
   event.target.classList.remove("uponClick");
 }
 
-function handleClick(button) {
-  button.target.classList.add("uponClick");
-  if (winner!="") resetGame();
-  playGame(button.target.textContent.toLowerCase());
+function handleClick(event) {
+  event.target.classList.add("uponClick");
+  let buttonID = event.target.getAttribute("id");
+  switch (true) {
+    case buttonID==="reset": {
+      resetGame();
+      return;
+    }
+    case winner!="": resetGame();
+    default: {
+      playGame(buttonID);
+    }
+  } 
 }
 
   function playGame(UserItem) {
+    roundNo += 1;
     roundNoFld.textContent = `Round ${roundNo}`
     let ComputerItem = getComputerItem();
     vsFld.textContent = `${UserItem} vs. ${ComputerItem}`
     outputFld.textContent = playRound(UserItem, ComputerItem);
     scoreFld.textContent = `You: ${userScore} --- Computer: ${computerScore}`;
     if (checkWinner()) endGame();
-      roundNo += 1;
   }
 
 function playRound(UserItem, ComputerItem) {
@@ -84,7 +82,6 @@ function getComputerItem() {
   }
 }
 
-
 function checkWinner() {
   if (computerScore >= 5) {
     winner="computer";
@@ -104,7 +101,7 @@ function endGame() {
 }
 
 function resetGame() {
-  roundNo =1;
+  roundNo =0;
   userScore =0;
   computerScore=0;
   winner="";
