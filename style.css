@@ -80,7 +80,7 @@ body {
 }
 
 .upper {
-    height: 50%;
+    height: 70%;
     justify-content: space-around;
     gap: 16px;
     padding: 12px;
@@ -90,20 +90,27 @@ body {
 
 .lower {
     height: 50%;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    color: #161616;
 }
 
 
 #over {
-    padding: 16px;
-    color: #390f0ff0;
+    padding: 0px;
+    /*color: #390f0ff0;*/
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
+    font-size: 30px;
     /*width: 300px;*/
+}
+
+#press {
+    font-size: 14px;
+    text-align: right;
+    visibility: hidden;
 }
 
 button {
@@ -114,4 +121,8 @@ button {
     font-weight: bold;
     width: 5rem;
     background: #e6e6e666;
+}
+
+.hidden {
+    visibility: hidden;
 }
