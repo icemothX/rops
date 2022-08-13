@@ -6,8 +6,9 @@ let roundNo = 1;
 let scoreMax = 5;
 let winner = "";
 
-const bttns = document.getElementById("buttons");
+const bttns = document.querySelectorAll("button");
 const resetBttn = document.getElementById("reset");
+const leftBttns = document.querySelector(".left");
 
 const roundNoFld = document.getElementById("round");
 const vsFld = document.getElementById("vs");
@@ -16,18 +17,28 @@ const scoreFld = document.getElementById("score");
 const overFld = document.getElementById("over");
 const pressFld = document.getElementById("press");
 
-buttons.addEventListener("click", event => {
+leftBttns.addEventListener("click", event => {
   if (event.target.nodeName == "BUTTON") {
-    handleClick(event.target.textContent.toLowerCase());
+    handleClick(event);
 }});
  
-resetBttn.addEventListener("click", resetGame);
+resetBttn.addEventListener("click", e => {
+  resetBttn.classList.add("uponClick");
+  resetGame(e);
+});
 
+bttns.forEach(btn => btn.addEventListener("transitionend", removeTransition))
 
-function handleClick(UserItem) {
+function removeTransition(event) {
+  if (event.propertyName!="transform") return;
+  event.target.classList.remove("uponClick");
+}
+
+function handleClick(button) {
+  button.target.classList.add("uponClick");
   if (winner!="") resetGame();
-      playGame(UserItem);
-  }
+  playGame(button.target.textContent.toLowerCase());
+}
 
   function playGame(UserItem) {
     roundNoFld.textContent = `Round ${roundNo}`

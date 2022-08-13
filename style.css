@@ -27,7 +27,7 @@ body {
     border: 0px;
     border-left: solid #060606f0 3px;
     border-right: solid #060606f0 3px;
-    background: rgba(0,0,0,0.4);
+    background: #00000066;
 }
 .side {
     width: 20px;
@@ -121,8 +121,12 @@ button {
     font-weight: bold;
     width: 5rem;
     background: #e6e6e666;
+    transition: all 0.08s ease;
 }
 
-.hidden {
-    visibility: hidden;
+.uponClick {
+    transform: scale(1.1);
+    color: #aaaaaa;
+    border-color: #aaaaaa;
+    background-color: #00000066;
 }
