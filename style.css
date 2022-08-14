@@ -4,7 +4,7 @@
 
 html {
     border: 0px;
-    background: url('images/IMG_5085_01_A.jpg') bottom center;
+    background: url('images/IMG_5085_03.jpg') bottom center;
     font-family: sans-serif;
 }
 
@@ -25,9 +25,10 @@ body {
 .center {
     height: 100vh;
     border: 0px;
-    border-left: solid #060606f0 3px;
-    border-right: solid #060606f0 3px;
-    background: #00000066;
+    border-left: solid #2f33458c 3px;
+    border-right: solid #2f33458c 3px;
+    /*background: #b492b566;*/
+    background: #44483e66;/* #9293b566;*/
 }
 .side {
     width: 20px;
@@ -38,16 +39,16 @@ body {
     padding: 36px;
     margin: 12px 0 0;
     text-align: center;
-    background: rgba(0,0,0,0.4);
-    color: #1a1717;
-    background: #e6e6e666;
+    /*background: rgba(0,0,0,0.4);*/
+    /*color: #1e2533;*/
+    background: #cab8ac66;/*#acbcca66;*/
     font-size: 1.9em;
     font-weight: bold;
 }
 
 #round {
     text-align: center;
-    color: #e6e6e6;
+    color: #ccbbbb; /* #e6e6e6;*/
     padding: 24px;
     text-align: center;
     font-size: 20px;
@@ -71,7 +72,7 @@ body {
 .outputs {
     width: 300px;
     flex: 1;
-    background: #e6e6e666;
+    background: #cab8ac66;/* #acbcca66;*/
     border-radius: 10px;
     font-size: 22px;
     font-weight: bold;
@@ -85,14 +86,17 @@ body {
     gap: 16px;
     padding: 12px;
     /*background-color: aliceblue;*/
-    color: #0d2904;
+    /*color: #0d2904;*/
 }
 
 .lower {
     height: 50%;
     align-items: center;
     justify-content: space-around;
-    color: #161616;
+    /*color: #161616;*/
+    background-color: #97868463;
+    border: dashed 2px #2c2524ba;
+    visibility: hidden;
 }
 
 
@@ -110,29 +114,34 @@ body {
 #press {
     font-size: 14px;
     text-align: right;
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 button {
     border-radius: 8px;
     color: #ffffff;
     padding: 6px 8px;
-    border: solid 2px #f0f0f0f0;
+    border: solid 2px #9b8575b3;/* #859badb3; /*#f0f0f0f0;*/
     font-weight: bold;
     width: 5rem;
-    background: #e6e6e666;
+    /*background: #e6e6e666;*/
+    background: #8b7a7ab3;/* #758a9bb3;*/
     transition: all 0.08s ease;
 }
 
 button:hover {
-   background-color: #88888866;
+   background-color: #6e5552d1;/*#52626ed1; /* #88888866;*/
    transform: scale(1.1);
+   border-color: #9b85757d;
 }
 
 button:active {
-    color: #aaaaaa;
+   /* color: #aaaaaa;
     border-color: #aaaaaa;
-    background-color: #00000066;
+    background-color: #00000066;*/
+    color: #ccbbbb; /* #bcccbb;*/
+    border-color: #5e4f43b3; /* #43525eb3;*/
+    background-color: #392a2ad1; /* #2a3339d1;*/
 }
 
 .uponClick {

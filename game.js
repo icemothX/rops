@@ -13,6 +13,7 @@ const outputFld = document.getElementById("game-output");
 const scoreFld = document.getElementById("score");
 const overFld = document.getElementById("over");
 const pressFld = document.getElementById("press");
+const lowerFld =document.querySelector(".lower");
 
 bttnList.forEach(btn => btn.addEventListener("click", handleClick));
 
@@ -89,7 +90,8 @@ function checkWinner() {
 function endGame() {
   overFld.innerText = winner==="user" ? 
   "You win!" : "You lose!";
-  pressFld.style.visibility="visible";
+  lowerFld.style.visibility="visible";
+  //pressFld.style.visibility="visible";
 }
 
 function resetGame() {
@@ -102,5 +104,5 @@ function resetGame() {
   outputFld.textContent="";
   scoreFld.textContent="";
   overFld.textContent="";
-  pressFld.style.visibility="hidden";
+  lowerFld.style.visibility="hidden";
 }
